@@ -53,4 +53,4 @@ img.save("modularmultcircle.png")
 <li>Ta daaa..</li>
 <img src="/assets/modmultcircle.png"/>
 <i>İlgilenenler için github'da nesneye dayalı özelleştirilmiş halini de paylaştım. <a href="https://github.com/canberkturan/PythonProjects/blob/master/ModularMultiplicationCircle.py">Buradan</a> ulaşabilirsiniz</i>
-<a href="/2019/05/10/modülerçarpımçemberi2.html">Önceki Sayfa</a>
+<a href="/2019/05/10/Mod%C3%BCler-%C3%87arp%C4%B1m-%C3%87emberi.html">Önceki Sayfa</a>
