@@ -16,4 +16,4 @@ layout: post
 <li>Ve ortaya bu muhteşem sonuç çıkıyor...</li>
 <img src="/assets/sscrop2.png" style="width: 360px; height:360px"/>
 
-<p>Şimdi sıra kodlama tarafında</p><a href="/modulercarpimcemberi2">Sonraki Sayfa</a>
+<p>Şimdi sıra kodlama tarafında</p><a href="/2019/05/10/modülercarpimcemberi2.html">Sonraki Sayfa</a>
