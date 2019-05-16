@@ -2,7 +2,7 @@
 author: canberkturan
 layout: post
 title: Modüler Çarpım Çemberi (Kodlama)
-permalink: modulercarpimcemberi2
+
 ---
 
 <b>Gereksinimler:</b><br>
@@ -53,4 +53,4 @@ img.save("modularmultcircle.png")
 <li>Ta daaa..</li>
 <img src="/assets/modmultcircle.png"/>
 <i>İlgilenenler için github'da nesneye dayalı özelleştirilmiş halini de paylaştım. <a href="https://github.com/canberkturan/PythonProjects/blob/master/ModularMultiplicationCircle.py">Buradan</a> ulaşabilirsiniz</i>
-<a href="/modulercarpimcemberi">Önceki Sayfa</a>
+<a href="/2019/05/10/modülerçarpımçemberi2.html">Önceki Sayfa</a>
