@@ -2,7 +2,7 @@
 author: canberkturan
 layout: post
 title: Modüler Çarpım Çemberi
-permalink: moduler-carpim-cemberi
+permalink: /moduler-carpim-cemberi
 ---
 
 <p>Merhaba, bugün sizlere youtube'da mathologger kanalında izleyip öğrendiğim matematik harikası şekillerden bahsedeceğim. Ardından da birlikte python kodu yazarak bu şekillerin nasıl oluşturulduğunu öğreneceğiz. Eğer hazırsanız başlayalım!</p>
