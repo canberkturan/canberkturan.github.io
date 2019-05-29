@@ -1,6 +1,7 @@
 ---
 author: canberkturan
 layout: post
+title: Modüler Çarpım Çemberi
 post_url: moduler-carpim-cemberi.html
 ---
 
