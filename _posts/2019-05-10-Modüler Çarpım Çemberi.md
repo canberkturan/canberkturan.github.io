@@ -17,4 +17,4 @@ permalink: /moduler-carpim-cemberi
 <li>Ve ortaya bu muhteşem sonuç çıkıyor...</li>
 <img src="/assets/sscrop2.png" style="width: 360px; height:360px"/>
 
-<p>Şimdi sıra kodlama tarafında</p><a href="/moduler-carpim-cemberi">Sonraki Sayfa</a>
+<p>Şimdi sıra kodlama tarafında</p><a href="/moduler-carpim-cemberi-2">Sonraki Sayfa</a>
