@@ -3,7 +3,7 @@ layout: page
 title: Hakkımda
 permalink: /about/
 ---
-
+<img src="https://avatars3.githubusercontent.com/u/24252405?s=400&v=4" style="width: 360px; height:360px;"/>
 <li>1998'de İzmir'de doğdum.</li>
 <li>6 yaşımdayken ailemle Çanakkale'ye taşındım.</li>
 <li>Liseyi Vahit Tuna Anadolu Lisesi'nde okudum.</li>
