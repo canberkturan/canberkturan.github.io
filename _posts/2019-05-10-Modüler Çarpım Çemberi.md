@@ -1,7 +1,7 @@
 ---
 author: canberkturan
 layout: post
-post-url: moduler-carpim-cemberi.html
+post_url: moduler-carpim-cemberi.html
 ---
 
 <p>Merhaba, bugün sizlere youtube'da mathologger kanalında izleyip öğrendiğim matematik harikası şekillerden bahsedeceğim. Ardından da birlikte python kodu yazarak bu şekillerin nasıl oluşturulduğunu öğreneceğiz. Eğer hazırsanız başlayalım!</p>
