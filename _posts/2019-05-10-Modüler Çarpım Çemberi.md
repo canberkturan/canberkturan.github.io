@@ -2,7 +2,7 @@
 author: canberkturan
 layout: post
 title: Modüler Çarpım Çemberi
-post_url: moduler-carpim-cemberi.html
+permalink: moduler-carpim-cemberi
 ---
 
 <p>Merhaba, bugün sizlere youtube'da mathologger kanalında izleyip öğrendiğim matematik harikası şekillerden bahsedeceğim. Ardından da birlikte python kodu yazarak bu şekillerin nasıl oluşturulduğunu öğreneceğiz. Eğer hazırsanız başlayalım!</p>
@@ -17,4 +17,4 @@ post_url: moduler-carpim-cemberi.html
 <li>Ve ortaya bu muhteşem sonuç çıkıyor...</li>
 <img src="/assets/sscrop2.png" style="width: 360px; height:360px"/>
 
-<p>Şimdi sıra kodlama tarafında</p><a href="/moduler-carpim-cemberi-2.html">Sonraki Sayfa</a>
+<p>Şimdi sıra kodlama tarafında</p><a href="/moduler-carpim-cemberi">Sonraki Sayfa</a>
