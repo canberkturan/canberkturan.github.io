@@ -30,11 +30,11 @@ permalink: /yapay-sinir-aglari
 <h2>Yapay Sinir Ağları(ANN veya YSA) Nedir?</h2>
 Yapay sinir ağları, beyinlerdeki sinir ağlarından esinlenilerek ortaya atılan bir yapay zeka modelidir.
 Nöron veya perceptron adı verilen temel birimlerden oluşur.
-<br><img src="/assets/neural_network.png" style="width: 360px; height: auto"/>
+<br><img src="/assets/neural_network.png" style="width: 540px; height: auto"/>
 <h4><b>Nöron(Perceptron) Nedir?</b></h4>
 Nöronlar, çoklu girişlere, toplam ve aktivasyon fonksiyonuna ve çıkışa sahip olan birimledir.
 Girdileri alır, ağırlıkları ile çarpar, sonuçları toplar, bir aktivasyon fonksiyonuna gönderir ve çıktı elde edilir.
-<br><img src="/assets/perceptron.jpg" style="width: 360px; height: auto"/>
+<br><img src="/assets/perceptron.jpg" style="width: 540px; height: auto"/>
 <br>$$output = f(\sum_{i=0}^N (w_i\cdot x_i+b_i))$$
 <h4><b>Yapay Sinir Ağları Nasıl Çalışır?</b></h4>
 Girdiler alındıktan sonra her biri ilk katmandaki tüm nöronlara, her bir bağlantı için ayrı olacak şekilde ağırlıkları ile çarpılıp varsa bias değerleri eklenerek gönderilir. Ardından ilk katmandaki nöronlar kendilerine gelen değerleri toplar ve aktivasyon fonksiyonuna sokar. Çıktıyı bir sonraki katmandaki tüm nöronlara gönderir. Son katmandaki nöronlar aktivasyon fonksiyonundan gelen değeri çıktı olarak verir.
