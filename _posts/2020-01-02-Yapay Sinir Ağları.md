@@ -35,7 +35,7 @@ Nöron veya perceptron adı verilen temel birimlerden oluşur.
 Nöronlar, çoklu girişlere, toplam ve aktivasyon fonksiyonuna ve çıkışa sahip olan birimledir.
 Girdileri alır, ağırlıkları ile çarpar, sonuçları toplar, bir aktivasyon fonksiyonuna gönderir ve çıktı elde edilir.
 <br><img src="/assets/perceptron.jpg" style="width: 360px; height: auto"/>
-<br>$$output = f(\sum_{i=1}^N (w_i\cdot x_i+b_i))$$
+<br>$$output = f(\sum_{i=0}^N (w_i\cdot x_i+b_i))$$
 <h4><b>Yapay Sinir Ağları Nasıl Çalışır?</b></h4>
 Girdiler alındıktan sonra her biri ilk katmandaki tüm nöronlara, her bir bağlantı için ayrı olacak şekilde ağırlıkları ile çarpılıp varsa bias değerleri eklenerek gönderilir. Ardından ilk katmandaki nöronlar kendilerine gelen değerleri toplar ve aktivasyon fonksiyonuna sokar. Çıktıyı bir sonraki katmandaki tüm nöronlara gönderir. Son katmandaki nöronlar aktivasyon fonksiyonundan gelen değeri çıktı olarak verir.
 İstenilen çıktı ile aradaki fark hesaplanır bu farka göre ağırlık değerleri ve bias güncellenir. Böylelikle yapay sinir ağı problemi öğrenmiş olur.
