@@ -50,6 +50,6 @@ for i in range(len(dotTable)):
 img.save("modularmultcircle.png")
 {% endhighlight %}
 - Ta daaa..
-<img src="/assets/modmultcircle.png"/>
-_İlgilenenler için github'da nesneye dayalı özelleştirilmiş halini de paylaştım. <a href="https://github.com/canberkturan/PythonProjects/blob/master/ModularMultiplicationCircle.py">Buradan</a> ulaşabilirsiniz_
+<br/><img src="/assets/modmultcircle.png" style="width: 360px; height:auto"/>
+- _İlgilenenler için github'da nesneye dayalı özelleştirilmiş halini de paylaştım. <a href="https://github.com/canberkturan/PythonProjects/blob/master/ModularMultiplicationCircle.py">Buradan</a> ulaşabilirsiniz_
 <a href="/moduler-carpim-cemberi">Önceki Sayfa</a>

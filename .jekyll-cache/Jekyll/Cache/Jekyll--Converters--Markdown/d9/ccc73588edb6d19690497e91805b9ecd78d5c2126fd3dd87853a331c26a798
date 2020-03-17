@@ -1,0 +1,63 @@
+I"P<p><strong>Gereksinimler:</strong><br /></p>
+<ul>
+  <li><em>Python 3</em></li>
+  <li><em>PIL(pillow) Kitaplığı -&gt; pip3 install pillow</em>
+Hazırsanız kodlamaya geçelim…</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageDraw</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="c1">#Kitaplıkları içe aktarıyoruz...</span></code></pre></figure>
+
+<ul>
+  <li>İlk önce boş bir resim nesnesi oluşturalım ve değişkenlerimize değer atayalım</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">x</span> <span class="o">=</span> <span class="mi">200</span> <span class="c1"># nokta sayısı
+</span><span class="n">k</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># çarpan değeri
+</span><span class="n">size</span> <span class="o">=</span> <span class="mi">1080</span> <span class="c1"># resim boyutu
+</span><span class="n">pad</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1"># kenar boşluğu
+</span><span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s">"RGB"</span><span class="p">,</span> <span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">),</span> <span class="s">"white"</span><span class="p">)</span></code></pre></figure>
+
+<ul>
+  <li>Ardından bir çember çizelim.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">img</span><span class="p">)</span> <span class="c1"># resmin üzerine çizim yapabilmek için ImageDraw nesnesi oluşturduk.
+</span><span class="n">draw</span><span class="o">.</span><span class="n">ellipse</span><span class="p">((</span><span class="n">pad</span><span class="p">,</span><span class="n">pad</span><span class="p">,</span><span class="n">size</span><span class="o">-</span><span class="n">pad</span><span class="p">,</span><span class="n">size</span><span class="o">-</span><span class="n">pad</span><span class="p">),</span><span class="n">outline</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span> <span class="c1"># çember çizdik.</span></code></pre></figure>
+
+<ul>
+  <li>Noktaların konumlarını hesaplayalım.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"> 
+<span class="n">dotTable</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># noktaları tutacak bir liste nesnesi oluşturduk.
+</span><span class="n">r</span> <span class="o">=</span> <span class="n">size</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">pad</span> <span class="c1"># yarıçap
+</span><span class="n">angle</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">/</span> <span class="n">x</span> <span class="c1"># ardışık 2 nokta arası açı(radyan)
+</span>    
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="c1"># her noktanın resimdeki hangi piksele karşılık geldiğini buluyoruz.
+</span>    <span class="n">dotX</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">size</span><span class="o">/</span><span class="mi">2</span> <span class="c1"># x değeri
+</span>    <span class="n">dotY</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">size</span><span class="o">/</span><span class="mi">2</span> <span class="c1"># y değeri
+</span>    <span class="n">dotTable</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">dotX</span><span class="p">,</span><span class="n">dotY</span><span class="p">))</span> <span class="c1"># tabloya (x,y) değeri ekleniyor.
+</span>    </code></pre></figure>
+
+<ul>
+  <li>Noktaların arasına çizgileri çizelim</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dotTable</span><span class="p">)):</span>
+    <span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">((</span><span class="o">*</span><span class="n">dotTable</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="o">*</span><span class="n">dotTable</span><span class="p">[(</span><span class="n">i</span><span class="o">*</span><span class="n">k</span><span class="p">)</span><span class="o">%</span><span class="n">x</span><span class="p">]),</span> <span class="n">fill</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span></code></pre></figure>
+
+<ul>
+  <li>Resmi kaydedelim.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">"modularmultcircle.png"</span><span class="p">)</span></code></pre></figure>
+
+<ul>
+  <li>Ta daaa..
+<br /><img src="/assets/modmultcircle.png" style="width: 360px; height:auto" />
+<em>İlgilenenler için github’da nesneye dayalı özelleştirilmiş halini de paylaştım. <a href="https://github.com/canberkturan/PythonProjects/blob/master/ModularMultiplicationCircle.py">Buradan</a> ulaşabilirsiniz</em>
+<a href="/moduler-carpim-cemberi">Önceki Sayfa</a></li>
+</ul>
+:ET

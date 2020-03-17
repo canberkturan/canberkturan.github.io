@@ -1,0 +1,7 @@
+I"g<p>Merhaba, bugün sizlere youtube’da <a href="https://youtube.com/mathologer">Mathologer</a> kanalında izleyip öğrendiğim matematik harikası şekillerden bahsedeceğim. Ardından da birlikte python kodu yazarak bu şekillerin nasıl oluşturulduğunu öğreneceğiz. Eğer hazırsanız başlayalım!</p>
+<ul>
+  <li>İlk önce iki tam sayı seçiyoruz. Ben bunlara x ve k diyeceğim. x nokta sayısına, k ise çarpan değerine karşılık gelecek. Örneğin: x=100 ve k=2</li>
+  <li>Sonra bir çember çizip bu çemberin kenarlarına eşit aralıklarla, belirlediğimiz x kadar nokta koyuyoruz.</li>
+</ul>
+
+:ET
