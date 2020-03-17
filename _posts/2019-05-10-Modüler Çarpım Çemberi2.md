@@ -4,10 +4,10 @@ layout: post
 title: Modüler Çarpım Çemberi (Kodlama)
 permalink: /moduler-carpim-cemberi-2
 ---
-**Gereksinimler:**<br>
+**Gereksinimler:**<br/>
 - _Python 3_
 - _PIL(pillow) Kitaplığı -> pip3 install pillow_
-Hazırsanız kodlamaya geçelim...
+<br/>Hazırsanız kodlamaya geçelim...
 
 {% highlight python %}
 from PIL import Image, ImageDraw
