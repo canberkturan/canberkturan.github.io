@@ -4,11 +4,10 @@ layout: post
 title: Modüler Çarpım Çemberi (Kodlama)
 permalink: /moduler-carpim-cemberi-2
 ---
-
-<b>Gereksinimler:</b><br>
-<li><i>Python 3</i></li>
-<li><i>PIL(pillow) Kitaplığı -> pip3 install pillow</i></li><br>
-<p>Hazırsanız kodlamaya geçelim...</p>
+**Gereksinimler:**<br>
+- _Python 3_
+- _PIL(pillow) Kitaplığı -> pip3 install pillow_
+Hazırsanız kodlamaya geçelim...
 
 {% highlight python %}
 from PIL import Image, ImageDraw
@@ -16,7 +15,7 @@ import math
 #Kitaplıkları içe aktarıyoruz...
 {% endhighlight %}
 
-<li>İlk önce boş bir resim nesnesi oluşturalım ve değişkenlerimize değer atayalım</li>
+- İlk önce boş bir resim nesnesi oluşturalım ve değişkenlerimize değer atayalım
 {% highlight python %}
 x = 200 # nokta sayısı
 k = 2 # çarpan değeri
@@ -24,12 +23,12 @@ size = 1080 # resim boyutu
 pad = 20 # kenar boşluğu
 img = Image.new("RGB", (size, size), "white")
 {% endhighlight %}
-<li>Ardından bir çember çizelim.</li>
+- Ardından bir çember çizelim.
 {% highlight python %}
 draw = ImageDraw.Draw(img) # resmin üzerine çizim yapabilmek için ImageDraw nesnesi oluşturduk.
 draw.ellipse((pad,pad,size-pad,size-pad),outline=(0,0,0)) # çember çizdik.
 {% endhighlight %}
-<li>Noktaların konumlarını hesaplayalım.</li>
+- Noktaların konumlarını hesaplayalım.
 {% highlight python %} 
 dotTable = [] # noktaları tutacak bir liste nesnesi oluşturduk.
 r = size / 2 - pad # yarıçap
@@ -41,16 +40,16 @@ for i in range(x): # her noktanın resimdeki hangi piksele karşılık geldiğin
     dotTable.append((dotX,dotY)) # tabloya (x,y) değeri ekleniyor.
     
 {% endhighlight %}
-<li>Noktaların arasına çizgileri çizelim</li>
+- Noktaların arasına çizgileri çizelim
 {% highlight python %}
 for i in range(len(dotTable)):
     draw.line((*dotTable[i], *dotTable[(i*k)%x]), fill=(0,0,0))
 {% endhighlight %}
-<li>Resmi kaydedelim.</li>
+- Resmi kaydedelim.
 {% highlight python %}
 img.save("modularmultcircle.png")
 {% endhighlight %}
-<li>Ta daaa..</li>
+- Ta daaa..
 <img src="/assets/modmultcircle.png"/>
-<i>İlgilenenler için github'da nesneye dayalı özelleştirilmiş halini de paylaştım. <a href="https://github.com/canberkturan/PythonProjects/blob/master/ModularMultiplicationCircle.py">Buradan</a> ulaşabilirsiniz</i>
+_İlgilenenler için github'da nesneye dayalı özelleştirilmiş halini de paylaştım. <a href="https://github.com/canberkturan/PythonProjects/blob/master/ModularMultiplicationCircle.py">Buradan</a> ulaşabilirsiniz_
 <a href="/moduler-carpim-cemberi">Önceki Sayfa</a>
