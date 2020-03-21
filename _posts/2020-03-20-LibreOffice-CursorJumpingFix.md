@@ -1,5 +1,5 @@
 ---
-author: canberkturan
+author: Canberk TURAN
 lang: en
 title: LibreOffice - Cursor Jumping Fix
 layout: post

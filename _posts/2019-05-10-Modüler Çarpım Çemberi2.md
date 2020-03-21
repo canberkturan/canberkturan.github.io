@@ -1,5 +1,5 @@
 ---
-author: canberkturan
+author: Canberk TURAN
 layout: post
 title: Modüler Çarpım Çemberi (Kodlama)
 permalink: /moduler-carpim-cemberi-2
