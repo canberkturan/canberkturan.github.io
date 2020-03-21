@@ -23,7 +23,6 @@ Hello, I'll tell about my first fixing a bug in LibreOffice. I was informed abou
 <img src="/assets/cursor_bug.gif" style="width: auto; height: auto"/>
 <br/>
 
-
 - If you try these steps on another graphical text editors(like gedit, mousepad etc.), cursor will move to end of the last line.
 
 - When, I started debugging process, I used 'git grep' command to find the source files and functions execute when pressing up or down keys.
@@ -42,7 +41,6 @@ Hello, I'll tell about my first fixing a bug in LibreOffice. I was informed abou
 
 After I found the function, my next job was understanding how does this function work.
 
-
 - I read again the function but I didn't find significant information.
 
 - Next, I put a lot of log functions into the function to find which parts of function run when I go to the last line of document and which parts of does not.
@@ -51,18 +49,13 @@ After I found the function, my next job was understanding how does this function
 
 - After I found if-condition, I researched to find how to move cursor position. 
 
-- And I saw a variable has named as aOldPos.
+- And I saw a variable has named as aOldPos. I detected which type is it and which values kept by it. This variable was used for setting cursor position.
 
-- I detected type of aOldPos and which values kept by it.
-
-- And I created a new variable that has same type with aOldPos. 
-
-- After that, I assigned the right values to new variable.
+- And I created a new variable that has same type with aOldPos and assigned new position.
 
 - And I built and run the LibreOffice again.
 
 I entered some text and moved the cursor to the last line of file. Pressed down arrow key again. And results were amazing. It worked. After the surprising, I thought what if I go to first line of the file and press the up arrow key again, what would happen? I tried but it doesn't worked. Cursor didn't move. But the solution was simple because UpDown function had a paramether named as bUp. This paramether was taking a boolean value takes the cursor movement direction.(true means up, false means down)
-
 
 - I added an ternary operator checks bUp variable to catch direction of cursor movement and assign the right position.
 
@@ -80,8 +73,7 @@ Next of the debugging part, I submitted a patch to LibreOffice and added Gülşa
 
 If you interest about my patch -> [Patch:89533][patch]
 
-I had found a new problem, after I fixed this bug. My next post will be about this problem.
-
+I had found a new problem about this cursor movement, after I fixed this bug. Cursor must move on same column after it jumped to start of the first line or end of the last line when up/down keys are pressed again. But cursor was moving on previous saved column. My next post will be about this problem.
 
 [patch]: https://gerrit.libreoffice.org/c/core/+/89533
 [gulsahkose]: http://www.gulsahkose.com

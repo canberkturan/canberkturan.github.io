@@ -1,4 +1,4 @@
-I"�<p>Hello, I’ll tell about my first fixing a bug in LibreOffice. I was informed about this bug by a Certified LibreOffice Developer Gülşah KÖSE.</p>
+I"}<p>Hello, I’ll tell about my first fixing a bug in LibreOffice. I was informed about this bug by a Certified LibreOffice Developer Gülşah KÖSE.</p>
 
 <ul>
   <li>
@@ -67,16 +67,10 @@
     <p>After I found if-condition, I researched to find how to move cursor position.</p>
   </li>
   <li>
-    <p>And I saw a variable has named as aOldPos.</p>
+    <p>And I saw a variable has named as aOldPos. I detected which type is it and which values kept by it. This variable was used for setting cursor position.</p>
   </li>
   <li>
-    <p>I detected type of aOldPos and which values kept by it.</p>
-  </li>
-  <li>
-    <p>And I created a new variable that has same type with aOldPos.</p>
-  </li>
-  <li>
-    <p>After that, I assigned the right values to new variable.</p>
+    <p>And I created a new variable that has same type with aOldPos and assigned new position.</p>
   </li>
   <li>
     <p>And I built and run the LibreOffice again.</p>
@@ -108,6 +102,6 @@
 
 <p>If you interest about my patch -&gt; <a href="https://gerrit.libreoffice.org/c/core/+/89533">Patch:89533</a></p>
 
-<p>I had found a new problem, after I fixed this bug. My next post will be about this problem.</p>
+<p>I had found a new problem about this cursor movement, after I fixed this bug. Cursor must move on same column after it jumped to start of the first line or end of the last line when up/down keys are pressed again. But cursor was moving on previous saved column. My next post will be about this problem.</p>
 
 :ET
