@@ -80,5 +80,8 @@ Next of the debugging part, I submitted a patch to LibreOffice and added Gülşa
 
 If you interest about my patch -> [Patch:89533][patch]
 
+I had found a new problem, after I fixed this bug. My next post will be about this problem.
+
+
 [patch]: https://gerrit.libreoffice.org/c/core/+/89533
 [gulsahkose]: http://www.gulsahkose.com
