@@ -1,0 +1,111 @@
+I"^<p>Hello, I’ll tell about my first fixing a bug in LibreOffice. I was informed about this bug by a Certified LibreOffice Developer Gülşah KÖSE.</p>
+
+<ul>
+  <li>
+    <p>You can look at the bug with this link: <a href="https://bugs.documentfoundation.org/show_bug.cgi?id=81226">tdf#81226</a></p>
+  </li>
+  <li>
+    <p>Firstly, I’m gonna say how to get this error:</p>
+  </li>
+</ul>
+
+<blockquote>
+  <ol>
+    <li>Open a new Writer file.</li>
+    <li>Insert some text has two or more lines.</li>
+    <li>Move the cursor center of any line.</li>
+    <li>Go to last line by pressing down arrow key.</li>
+    <li>Press again.</li>
+    <li>Cursor won’t move.</li>
+  </ol>
+</blockquote>
+
+<p><br />
+<img src="/assets/cursor_bug.gif" style="width: auto; height: auto" />
+<br /></p>
+
+<ul>
+  <li>
+    <p>If you try these steps on another graphical text editors(like gedit, mousepad etc.), cursor will move to end of the last line.</p>
+  </li>
+  <li>
+    <p>When, I started debugging process, I used ‘git grep’ command to find the source files and functions execute when pressing up or down keys.</p>
+  </li>
+  <li>
+    <p>In source directory, I searched ‘cursor’, ‘up’, ‘down’, ‘updown’ and ‘move’ keywords with these lower and upper forms.</p>
+  </li>
+  <li>
+    <p>And I found a directory: sw/source/core/crsr/</p>
+  </li>
+  <li>
+    <p>After entering the directory, I searched the keywords said before again.</p>
+  </li>
+  <li>
+    <p>I reached a couple possible source files: swcrsr.cxx, crsrsh.cxx, editsh.cxx</p>
+  </li>
+  <li>
+    <p>I read all parts that includes ‘up’, ‘down’ keywords in these files.</p>
+  </li>
+  <li>
+    <p>And I found the right function that has expected name: UpDown Function in swcrsr.cxx file</p>
+  </li>
+</ul>
+
+<p>After I found the function, my next job was understanding how does this function work.</p>
+
+<ul>
+  <li>
+    <p>I read again the function but I didn’t find significant information.</p>
+  </li>
+  <li>
+    <p>Next, I put a lot of log functions into the function to find which parts of function run when I go to the last line of document and which parts of does not.</p>
+  </li>
+  <li>
+    <p>I found an if-condition processed when I pressed down arrow key at the last line.</p>
+  </li>
+  <li>
+    <p>After I found if-condition, I researched to find how to move cursor position.</p>
+  </li>
+  <li>
+    <p>And I saw a variable has named as aOldPos.</p>
+  </li>
+  <li>
+    <p>I detected type of aOldPos and which values kept by it.</p>
+  </li>
+  <li>
+    <p>And I created a new variable that has same type with aOldPos.</p>
+  </li>
+  <li>
+    <p>After that, I assigned the right values to new variable.</p>
+  </li>
+  <li>
+    <p>And I built and run the LibreOffice again.</p>
+  </li>
+</ul>
+
+<p>I entered some text and moved the cursor to the last line of file. Pressed down arrow key again. And results were amazing. It worked. After the surprising, I thought what if I go to first line of the file and press the up arrow key again, what would happen? I tried but it doesn’t worked. Cursor didn’t move. But the solution was simple because UpDown function had a paramether named as bUp. This paramether was taking a boolean value takes the cursor movement direction.(true means up, false means down)</p>
+
+<ul>
+  <li>
+    <p>I added an ternary operator checks bUp variable to catch direction of cursor movement and assign the right position.</p>
+  </li>
+  <li>
+    <p>If bUp was true, position variable would take 0 value. If wasn’t, position variable would take length of the line.</p>
+  </li>
+  <li>
+    <p>I built and run the LibreOffice again.</p>
+  </li>
+  <li>
+    <p>I entered some random text, moved the cursor to the last line, pressed down key again. The cursor went to end of the last line as expected. Next, I moved the cursor to the first line, pressed up key again. And It worked, The cursor went to start of the first line.</p>
+  </li>
+</ul>
+
+<p><br />
+<img src="/assets/cursor_fix.gif" style="width: 100; height: auto" />
+<br /></p>
+
+<p>Next of the debugging part, I submitted a patch to LibreOffice and added Gülşah Köse as reviewer. After some fixing typos and editing commit messages, She merged my patch. I thank her again from here. If you want to read her blog, you can reach on this <a href="http://www.gulsahkose.com">link</a>.</p>
+
+<p>If you interest about my patch: <a href="https://gerrit.libreoffice.org/c/core/+/89533"></a>&lt;/a&gt;</p>
+
+:ET
