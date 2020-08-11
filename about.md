@@ -8,4 +8,4 @@ permalink: /about/
 - Liseyi Vahit Tuna Anadolu Lisesi'nde okudum.
 - Çanakkale Onsekiz Mart Üniversitesi Bilgisayar Mühendisliği Bölümünden 2020 yılında mezun oldum.
 - 2020 başında LibreOffice'e katkı vermeye başladım.
-- Mezun olduktan sonra <b>Derin Öğrenme</b> üzerinde uzmanlaşmak istiyorum.
+- <b>Veri Bilimi</b> ve <b>Derin Öğrenme</b> ile uğraşıyorum.
