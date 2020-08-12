@@ -14,5 +14,8 @@
 		{%- if site.texture.social_links.instagram -%}
 			<a href="https://instagram.com/{{ site.texture.social_links.instagram }}"><li><i class="fa fa-instagram" style="padding-right:5px"></i></li></a>
 		{%- endif -%}
+                {%- if site.texture.social_links.mail -%}
+                        <a href="mailto:{{ site.texture.social_links.mail }}"><li><i class="fa fa-mail" style="padding-right:5px"></i></li></a>
+                {%- endif -%}
 	</ul>
 </div>
