@@ -9,3 +9,8 @@ permalink: /about/
 - Çanakkale Onsekiz Mart Üniversitesi Bilgisayar Mühendisliği Bölümünden 2020 yılında mezun oldum.
 - 2020 başında LibreOffice'e katkı vermeye başladım.
 - <b>Veri Bilimi</b> ve <b>Derin Öğrenme</b> ile uğraşıyorum.
+
+
+
+
+[iletişim](mailto:canberk@canberkturan.com.tr)
