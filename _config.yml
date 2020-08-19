@@ -3,6 +3,7 @@ author: canberkturan
 email: canberk@canberkturan.com.tr
 description: Computer Engineer
 show_excerpts: true # set to true to show excerpts on the homepage
+lang: tr_TR
 baseurl: ""
 
 # Minima date format
