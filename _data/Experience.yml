@@ -1,0 +1,29 @@
+subject: Experiences
+listing-order: 2
+icon: "/assets/img/briefcase.svg"
+contents:
+  - title: Akbank T.A.Ş.
+    role: Senior Site Reliability Engineer
+    description:
+      - Driving End-to-end production multi-layer architecture
+      - Built dashboards on Grafana for monitoring
+      - Responsible to keep-alive Multi-Cluster OpenShift and dependend resources
+      - Responsible to keep-alive and configure Windows IIS & Linux Websphere Application Servers
+      - Created alarms to notice response time and error anomaly
+      - Worked with SDLC teams side-by-side
+      - Followed and used change management policies.
+    date: Sep. 2022 - Ongoing
+  - title: Huawei
+    role: Mid-Level DevOps/CI Engineer
+    description: 
+      - Built and developed semi-automated CI/CD pipelines. 
+      - Fixed vulnerabilities of pre-production servers.
+    date: Jul. 2022 - Sep. 2022
+  - title: Ziraat Teknoloji A.Ş.
+    role: Software Engineer
+    description: 
+      - Worked on SDLC team that develops and supports in-house SDLC tool named Finix.
+      - Played active role on backend developement and created pipelines.
+      - Supported other developer teams directly.
+      - Developed a distribution monitoring web-site application from scratch to monitor which bank branches has updated and which is not. Used .Net Core, ReactJS and Oracle DB for this project.
+    date: Jul. 2013 - Sep. 2013

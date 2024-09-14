@@ -1,0 +1,20 @@
+subject: Skills
+listing-order: 5
+icon: "/assets/img/screwdriver-wrench.svg"
+contents:
+  - title: Programming Languages
+    description: "
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg)
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg)
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg)
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg)
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-plain.svg)
+    "
+  - title: Frameworks
+    description: "
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg)
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg)
+      ![devicon](https://upload.wikimedia.org/wikipedia/commons/3/3a/OpenShift-LogoType.svg)
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg)
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg)
+    "

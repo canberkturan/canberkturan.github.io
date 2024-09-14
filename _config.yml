@@ -1,41 +1,31 @@
-title: Canberk TURAN
-author: canberkturan
-email: canberk@canberkturan.com.tr
-description: Computer Engineer
-show_excerpts: true # set to true to show excerpts on the homepage
-lang: tr_TR
-baseurl: ""
+title: Canberk TURAN's Resume
+profile_img: /assets/img/profile.png
+icon_img: /assets/img/icon.webp
 
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-sass:
-  sass_dir: _sass
+name: "Canberk TURAN"
+job: "〈Senior Site Reliability Engineer〉"
 
-permalink: /posts/:title/
-texture:
-  title: Canberk TURAN
-  tagline: Computer Engineer
-  date_format: "%b %-d, %Y"
-  style: black
-  showNav: true
-  showPicker: false
+# phone_number: 012-345-6789
+address: Canakkale, Turkey
+email: ct@cturan.com.tr
+linkedin_username: canberk-turan
+github_username: canberkturan
+instagram_username: canberkkturann
+# twitter_username: twitter
+# facebook_username: facebook
+# youtube_username: youtube
+# blog_url: homepage-url
 
-  # generate social links in footer
-  social_links:
-    twitter: canberkkturann
-    github:  canberkturan
-    linkedIn: in/canberk-turan
-    mail: canberk@canberkturan.com.tr
-    rss: rss
- 
+# If your repo name follows the format "<user-name>.github.io", then leave the below blank.
+# Otherwise, set its value as "/<repo-name>". ex) baseurl: /resume
+baseurl:
 
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
+exclude:
+  - _posts/
+  - resources/
+  - vendor/
 
-# Build settings
-# theme: texture
 plugins:
-  - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag

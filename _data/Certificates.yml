@@ -1,0 +1,7 @@
+subject: Certificates
+listing-order: 6
+icon: "/assets/img/trophy.svg"
+contents:
+  - title: CKA
+    description: Certified Kubernetes Administrator by Cloud Native Computing Foundation
+    date: Dec. 2022
