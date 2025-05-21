@@ -1,0 +1,8 @@
+subject: Summary
+listing-order: 1
+icon: "/assets/img/user-tie.svg"
+contents:
+  - description: >
+      Site Reliability Engineer with 4+ years of experience designing, deploying, and operating scalable and resilient cloud-native systems.
+      Skilled in Kubernetes, OpenShift, CI/CD, and monitoring technologies.
+      Proven ability to bridge development and operations teams, driving service performance and platform reliability across enterprise-scale environments.
