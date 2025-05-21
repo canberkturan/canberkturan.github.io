@@ -1,6 +1,6 @@
 subject: Summary
 listing-order: 1
-icon: "/assets/img/user-tie.svg"
+icon: "/assets/img/summary.png"
 contents:
   - description: >
       Site Reliability Engineer with 4+ years of experience designing, deploying, and operating scalable and resilient cloud-native systems.
