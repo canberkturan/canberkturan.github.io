@@ -4,26 +4,31 @@ icon: "/assets/img/briefcase.svg"
 contents:
   - title: Akbank T.A.Ş.
     role: Senior Site Reliability Engineer
+    date: Sep. 2022 – Ongoing
     description:
-      - Driving End-to-end production multi-layer architecture
-      - Built dashboards on Grafana for monitoring
-      - Responsible to keep-alive Multi-Cluster OpenShift and dependend resources
-      - Responsible to keep-alive and configure Windows IIS & Linux Websphere Application Servers
-      - Created alarms to notice response time and error anomaly
-      - Worked with SDLC teams side-by-side
-      - Followed and used change management policies.
-    date: Sep. 2022 - Ongoing
+      - Defined and tracked SLA, SLO, and SLI metrics to align application and infrastructure performance.
+      - Built Grafana dashboards aggregating metrics from multiple sources to enhance observability.
+      - Led cross-functional incident response to reduce MTTR and improve uptime.
+      - Eliminated SPOFs and contributed to highly available platform architecture design.
+      - Led GitOps and multicluster transformation across 10+ OpenShift clusters, managing values.yaml configurations and coordinating releases for 50+ projects.
+      - Developed Jenkins pipelines to streamline deployments and improve engineering efficiency.
+      - Applied KEDA-driven autoscaling strategies for dynamic resource optimization.
+
   - title: Huawei
-    role: Mid-Level DevOps/CI Engineer
-    description: 
-      - Built and developed semi-automated CI/CD pipelines. 
-      - Fixed vulnerabilities of pre-production servers.
-    date: Jul. 2022 - Sep. 2022
+    role: DevOps Engineer
+    date: Jul. 2022 – Sep. 2022
+    description:
+      - Managed CI/CD pipelines and integrated them with application teams for streamlined delivery.
+      - Addressed security vulnerabilities in staging environments to enhance deployment reliability.
+      - Monitored production deployments and resolved live issues.
+      - Collaborated across remote teams in China and India to improve workflow alignment.
+
   - title: Ziraat Teknoloji A.Ş.
     role: Software Engineer
-    description: 
-      - Worked on SDLC team that develops and supports in-house SDLC tool named Finix.
-      - Played active role on backend developement and created pipelines.
-      - Supported other developer teams directly.
-      - Developed a distribution monitoring web-site application from scratch to monitor which bank branches has updated and which is not. Used .Net Core, ReactJS and Oracle DB for this project.
-    date: Jul. 2013 - Sep. 2013
+    date: Nov. 2020 – Jul. 2022
+    description:
+      - Participated in the development of Finix, an internal platform supporting end-to-end SDLC and deployment automation.
+      - Maintained and extended .NET-based backend/frontend services across the enterprise.
+      - Managed delivery infrastructure for distributing internal banking apps to branch endpoints.
+      - Built a custom monitoring dashboard using .NET Core and ReactJS to improve production visibility.
+      - Supported monthly release cycles and incident management workflows.
