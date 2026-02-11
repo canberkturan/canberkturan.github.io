@@ -16,7 +16,7 @@
   <link rel="icon" type="image/png" href="{{ site.icon_img | prepend: site.baseurl }}">
   <link rel="shortcut icon" type="image/png" href="{{ site.icon_img | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}">
-  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
 </head>
 
 <body>
@@ -92,6 +92,11 @@
     <div class="name-zone">
       <h1>{{ site.name }}</h1>
       <h2>{{ site.job }}</h2>
+      {% if site.resume_pdf %}
+        <a class="download-btn" href="{{ site.resume_pdf | prepend: site.baseurl }}" download>
+          Download Resume
+        </a>
+      {% endif %}
     </div>
   </header>
   <main id="contents">
@@ -116,8 +121,11 @@
                       </span>
                     {% endif %}
                   </div>
+                  {% if member.role %}
+                    <p class="content-role">{{ member.role }}</p>
+                  {% endif %}
                   {% for item in member %}
-                    {% if item[0] != "title" and item[0] != "date" %}
+                    {% if item[0] != "title" and item[0] != "date" and item[0] != "role" %}
                       {% if item[1].first %}
                         <ul>
                           {% for subitem in item[1] %}
