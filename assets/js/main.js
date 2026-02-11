@@ -1,14 +1,15 @@
 document.addEventListener('DOMContentLoaded', function(){
     const tocbox = document.querySelector('.toc-box');
-    var headers = document.querySelectorAll('.subject-name');
+    const headers = document.querySelectorAll('.subject-name');
+    const contents = document.querySelectorAll('.subject, .item');
 
     headers.forEach((h) => {
-        let tocItem = document.createElement("li");
-        tocItem.id = "toc-id-" + h.textContent;
+        const tocItem = document.createElement("li");
+        tocItem.id = "toc-id-" + h.textContent.trim();
 
-        let itemLink = document.createElement("a");
+        const itemLink = document.createElement("a");
         itemLink.classList.add("content-link");
-        itemLink.textContent = h.textContent;
+        itemLink.textContent = h.textContent.trim();
 
         tocItem.append(itemLink);
 
@@ -21,37 +22,55 @@ document.addEventListener('DOMContentLoaded', function(){
         tocbox.append(tocItem);
     });
 
-    var contents = document.querySelectorAll('.subject, .item');
-
-    setInterval(function(){
-        var scrollPos = document.documentElement.scrollTop;
-        var wh = window.innerHeight;
-
-        Array.from(tocbox.querySelectorAll('li')).forEach(function(tocItem){
-            tocItem.classList.remove('active');
+    const appearObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('appear');
+                appearObserver.unobserve(entry.target);
+            }
         });
+    }, { threshold: 0.1 });
 
-        var currHead;
+    contents.forEach(function(c) {
+        appearObserver.observe(c);
+    });
 
-        Array.from(headers).forEach(function(h){
-            let headPos = h.getBoundingClientRect().top + window.scrollY - wh/2;
+    let lastActiveHeader = null;
 
+    function updateTocHighlight() {
+        const scrollPos = document.documentElement.scrollTop;
+        const wh = window.innerHeight;
+
+        let currHead = null;
+
+        headers.forEach(function(h) {
+            const headPos = h.getBoundingClientRect().top + window.scrollY - wh / 2;
             if (scrollPos > headPos) currHead = h;
         });
 
-        Array.from(contents).forEach(function(c){
-            let contentPos = c.getBoundingClientRect().top + window.scrollY - wh;
+        if (currHead === lastActiveHeader) return;
+        lastActiveHeader = currHead;
 
-            if (c.classList.contains("appear")) return;
-
-            if (scrollPos < contentPos) return;
-
-            c.classList.add('appear');
+        tocbox.querySelectorAll('li').forEach(function(tocItem) {
+            tocItem.classList.remove('active');
         });
 
-        if (currHead != undefined){
-            let tocLink = document.getElementById("toc-id-" + currHead.textContent);
-            tocLink.classList.add('active');
+        if (currHead) {
+            const tocLink = document.getElementById("toc-id-" + currHead.textContent.trim());
+            if (tocLink) tocLink.classList.add('active');
         }
-    }, 200);
+    }
+
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                updateTocHighlight();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+
+    updateTocHighlight();
 });

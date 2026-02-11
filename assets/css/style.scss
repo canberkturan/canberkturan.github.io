@@ -82,7 +82,6 @@ a { text-decoration:none; }
         width: 100%;
         height: 200px;
         margin: auto;
-        columns: 2;
         line-height: 250%;
         padding: 1rem 0;
         display: grid;
@@ -402,7 +401,7 @@ a { text-decoration:none; }
         .content-header {
             p { font-size: 18px; }
 
-            &:before{ visibility: visible !important; }
+            &:before{ visibility: visible; }
         }
 
         .content-header p,
