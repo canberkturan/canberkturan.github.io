@@ -92,11 +92,6 @@
     <div class="name-zone">
       <h1>{{ site.name }}</h1>
       <h2>{{ site.job }}</h2>
-      {% if site.resume_pdf %}
-        <a class="download-btn" href="{{ site.resume_pdf | prepend: site.baseurl }}" download>
-          Download Resume
-        </a>
-      {% endif %}
     </div>
   </header>
   <main id="contents">
